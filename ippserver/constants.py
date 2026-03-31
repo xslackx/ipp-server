@@ -58,7 +58,43 @@ class StatusCodeEnum(IntEnum):
     server_error_internal_error = 0x0500
     server_error_operation_not_supported = 0x0501
     server_error_job_canceled = 0x508
+    ok_ignored_or_substituted_attributes = 0x0001
+    ok_conflicting_attributes = 0x0002
 
+class StatusClientCodeErrorEnum(IntEnum):
+    # https://datatracker.ietf.org/doc/html/rfc2911#section-13.1.4
+    bad_request = 0x0400
+    forbidden = 0x0401
+    not_authenticated = 0x0402
+    not_authorized = 0x0403
+    timeout = 0x0405
+    not_found = 0x0406
+    gone = 0x0407
+    request_entity_too_large = 0x0408
+    request_value_too_long = 0x0409
+    document_format_not_supported = 0x040A
+    attributes_or_values_not_supported = 0x040B
+    uri_scheme_not_supported = 0x040C
+    charset_not_supported = 0x040D
+    conflicting_attributes = 0x040E
+    compression_not_supported = 0x040F
+    compression_error = 0x0410
+    document_format_error = 0x0411
+    document_access_error = 0x0412
+
+class StatusServerCodeErrorEnum(IntEnum):
+    # https://datatracker.ietf.org/doc/html/rfc2911#section-13.1.5
+    internal_error = 0x0500
+    operation_not_supported = 0x0501
+    service_unavailable = 0x0502
+    version_not_supported = 0x503
+    device_error = 0x0504
+    temporary_error = 0x0505
+    not_accepting_jobs = 0x0506
+    busy = 0x0507
+    job_canceled = 0x0508
+    multiple_document_jobs_not_supported = 0x0509
+    
 
 class OperationEnum(IntEnum):
     # https://tools.ietf.org/html/rfc2911#section-4.4.15
