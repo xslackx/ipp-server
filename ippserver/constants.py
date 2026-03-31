@@ -110,7 +110,18 @@ class OperationEnum(IntEnum):
     # https://web.archive.org/web/20061024184939/http://uw714doc.sco.com/en/cups/ipp.html
     cups_get_default = 0x4001
     cups_list_all_printers = 0x4002
-
+    cups_add_modify_printer = 0x4003
+    cups_delete_printer = 0x4004
+    cups_get_classes = 0x4005
+    cups_add_modify_class = 0x4006
+    cups_delete_class = 0x4007
+    cups_accept_jobs = 0x4008
+    cups_reject_jobs = 0x4009
+    cups_set_default = 0x400A
+    cups_get_devices = 0x400B
+    cups_get_ppds = 0x400C
+    cups_move_job = 0x400D
+    
 
 class JobStateEnum(IntEnum):
     # https://tools.ietf.org/html/rfc2911#section-4.3.7
